@@ -1,20 +1,18 @@
 interface Teacher {
-  readonly firstName: string;
-  readonly lastName: string;
-  fullTimeEmployee: boolean;
-  yearsOfExperience?: number;
-  location: string;
-  contract: boolean;
-};
+  readonly firstName: string;   // only modifiable at initialization
+  readonly lastName: string;    // only modifiable at initialization
+  fullTimeEmployee: boolean;    // required
+  yearsOfExperience?: number;   // optional
+  location: string;             // required
+  [key: string]: any;           // allows extra attributes
+}
 
 const teacher: Teacher = {
   firstName: 'Opeyemi',
-  lastName: 'Ajiabde',
+  lastName: 'Ajibade', // fixed typo here ✅
   fullTimeEmployee: false,
   location: 'London',
-  contract: false,
+  contract: false,     // extra attribute allowed
 };
 
 console.log(teacher);
-
-

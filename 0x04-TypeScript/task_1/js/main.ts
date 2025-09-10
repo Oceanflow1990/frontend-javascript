@@ -1,20 +1,20 @@
+// Define the Teacher interface
 interface Teacher {
-  firstName: string;
-  lastName: string;
-  fullTimeEmployee: boolean;
-  yearsOfExperience?: number;
-  location: string;
-  contract: boolean;
-};
+  readonly firstName: string; // can only be set at initialization
+  readonly lastName: string;  // can only be set at initialization
+  fullTimeEmployee: boolean;  // always required
+  yearsOfExperience?: number; // optional
+  location: string;           // always required
+  [key: string]: any;         // allows extra properties like "contract"
+}
 
-const teacher: Teacher = {
-  firstName: 'Opeyemi',
-  lastName: 'Ajiabde',
+// Example usage
+const teacher3: Teacher = {
+  firstName: 'John',
+  lastName: 'Doe',
   fullTimeEmployee: false,
   location: 'London',
-  contract: false,
+  contract: false,  // extra property allowed
 };
 
-console.log(teacher);
-
-
+console.log(teacher3);

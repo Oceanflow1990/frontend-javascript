@@ -7,7 +7,7 @@ interface Teacher {
   contract: boolean;
 };
 
-const teacher3: Teacher = {
+const teacher: Teacher = {
   firstName: 'Opeyemi',
   lastName: 'Ajiabde',
   fullTimeEmployee: false,
@@ -16,6 +16,6 @@ const teacher3: Teacher = {
   contract: false,
 };
 
-console.log(teacher3);
+console.log(teacher);
 
 

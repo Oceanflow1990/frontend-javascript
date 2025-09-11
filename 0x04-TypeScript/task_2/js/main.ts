@@ -50,9 +50,7 @@ console.log(createEmployee(1000) instanceof Teacher ? "Teacher" : "Director"); /
 console.log(createEmployee("$500") instanceof Teacher ? "Teacher" : "Director"); // Director
 
 
-
-
-function isDirector(employee: Teacher | Director): employee is Director {
+export function isDirector(employee: Teacher | Director): employee is Director {
   return employee instanceof Director;
 }
 

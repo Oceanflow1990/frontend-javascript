@@ -3,15 +3,13 @@
 /// <reference path="./subjects/React.ts" />
 /// <reference path="./subjects/Teacher.ts" />
 
-import { Subjects } from './subjects';
+// create constants for each subject
+const cpp = new Cpp();
+const java = new Java();
+const react = new React();
 
-// create and export constants for each subject
-export const cpp = new Subjects.Cpp();
-export const java = new Subjects.Java();
-export const react = new Subjects.React();
-
-// create and export one Teacher object cTeacher with experienceTeachingC = 10
-export const cTeacher: Subjects.Teacher = {
+// create one Teacher object cTeacher with experienceTeachingC = 10
+const cTeacher: Teacher = {
   firstName: 'John',
   lastName: 'Doe',
   experienceTeachingC: 10,
